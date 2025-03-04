@@ -50,7 +50,7 @@ def main():
 
     pygame.init()
     FPSCLOCK = pygame.time.Clock()
-    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
+    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), pygame.FULLSCREEN)
     pygame.display.set_caption('Simulate')
 
     BASICFONT = pygame.font.Font('freesansbold.ttf', 16)
@@ -80,7 +80,7 @@ def main():
         scoreSurf = BASICFONT.render('Score: ' + str(score), 1, WHITE)
         scoreRect = scoreSurf.get_rect()
         scoreRect.topleft = (WINDOWWIDTH - 100, 10)
-        DISPLAYSURF.blit(scoreSurf, scoreRect)
+        #DISPLAYSURF.blit(scoreSurf, scoreRect)
 
         DISPLAYSURF.blit(infoSurf, infoRect)
 
